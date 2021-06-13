@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title class="notranslate">Jade View</title>
+</head>
+
+<body class="page page-fix">
+    <header class="header">
+    <div class="header_section container d-flex align-items-center justify-content-between">
+        <a href="/index.html" class="mainlogo"> <picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" class="logo" alt=""></picture></a>
+        <div class="header-menu">
+            <div class="list d-flex align-items-center">
+                <a class="menu-a" href="/index.html">Home</a>
+                <a class="menu-a" href="/index.html#about">About us</a>
+                <a class="menu-a" href="/index.html#soc">Contacts</a>
+                <div class="dropdown">
+                    <a href="/products.html" class="dropdown menu-a">Products</a>
+                    <div class="d-content ">
+                        <a href="/daily_planner.html" class="dropdown-content">Diaries</a>
+                        <a href="/cosmetic.html" class="dropdown-content">Care cosmetics</a>
+                        <a href="/knifes.html" class="dropdown-content">Kitchen goods</a>
+                        <a href="/box.html" class="dropdown-content">Jewelry boxes and jewelry</a>
+                    </div>
+                </div>
+            </div>
+            <div class="feed d-flex align-items-center">
+                <div class="number">
+                    +1 (619) 689-3615
+                </div>
+                <button class="feedback" data-toggle="modal" data-target="#exampleModal">
+                    Feedback
+                </button>
+                <div class="my-dropdown">
+                    <div class="select">
+                        <div class="wrld"><picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang">En</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_2" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_3" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+                <div class="my-dropdown-mob">
+                    <div class="select">
+                        <div class="wrld"> <picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang-mob">Ru</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1-mob" data-google-lang="ru" class="notranslate"><div>Ru</div></li>
+                        <li id="lang_2-mob" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_3-mob" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4-mob" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-wrapper">
+            <div class="burger">
+                <span class="sp"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content d-flex flex-column align-items-center">
+            <div class="title">
+                <h3>
+                    Ask your question
+                </h3>
+                <h3>
+                    and we will be happy to help you!
+                </h3>
+            </div>
+            <form id="form1" action="form-handler.php" onsubmit="return validate_p1()" method="POST" class="d-flex flex-column form align-items-center">
+                <input type="text" placeholder="Name" id="FormInputName" name="FormInputName">
+                <input type="email" placeholder="E-mail" id="FormInputEmail" name="FormInputEmail">
+                <input type="tel" placeholder="Phone number" id="FormInputTel" name="FormInputTel">
+                <textarea cols="30" rows="10" placeholder="Your question*" id="FormInputQ" name="FormInputQ"></textarea>
+                <button type="submit" name="submit1">
+                    Send
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+    <div class="p1_s1">
+    <div class="swiper-container swiper-bg">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <div class="slide_general slide_1 d-flex  flex-column justify-content-center">
+
+                    <div class="p1_s1_c1 container d-flex flex-column ">
+                        <h2 class="zag">
+                            QUALITY SKIN CARE AND BEAUTY PRODUCT
+                        </h2>
+                        <div class="text_normal">
+                            Comfortable - Not Always Expensive
+                        </div>
+                        <button onclick="window.location.href = '/products.html'">
+                            Go to products
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide_general slide_2 d-flex align-items-center">
+                    <div class="p1_s1_c1 container d-flex flex-column ">
+                        <h2 class="zag">
+                            QUALITY PRODUCT FOR ORGANIZATION AND COMFORT
+                        </h2>
+                        <div class="text_normal">
+                            Comfortable - Not Always Expensive
+                        </div>
+                        <button onclick="window.location.href = '/products.html'">
+                            Go to products
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide_general slide_3 d-flex align-items-center">
+                    <div class="p1_s1_c1 container d-flex flex-column ">
+                        <h2 class="zag">
+                            QUALITY PRODUCT FOR CONVENIENCE IN THE KITCHEN
+                        </h2>
+                        <div class="text_normal">
+                            Comfortable - Not Always Expensive
+                        </div>
+                        <button onclick="window.location.href = '/products.html'">
+                            Go to products
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slide_general slide_4 d-flex align-items-center">
+                    <div class="p1_s1_c1 container d-flex flex-column ">
+                        <h2 class="zag">
+                            QUALITY BOXES AND ACCESSORIES
+                        </h2>
+                        <div class="text_normal">
+                            Comfortable - Not Always Expensive
+                        </div>
+                        <button onclick="window.location.href = '/products.html'">
+                            Go to products
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="about">
+
+    </div>
+</div>
+
+
+
+
+
+
+<div class="p1_s2 container d-flex flex-column justify-content-center">
+
+    <h2>
+        Quality goods for everyone
+    </h2>
+    <div class="p1_s2_c1 d-flex">
+        <div class="line_grey">
+        </div>
+        <div>
+            <div class="text">
+                 We, like many people, are faced with poor quality 
+                 products and the problem of finding high quality items on the current market.
+            </div>
+            <div class="text">
+                We thought - how can we solve this problem? 
+                Then, Jade View LLC was born.
+            </div>
+            <div class="text">
+               Thanks to this discovery, we began to find quality suppliers and 
+               produce goods available to everyone, 
+               so that can bring more aesthetics and organization into their lives..
+            </div>
+            <div class="text text_end">
+                That is why we are able to produce products that please both us and our customers,
+                 because we know first hand how difficult it is to choose both: 
+                 a product that is necessary and high quality.
+             </div>
+        </div>
+    </div>
+
+    <h2>
+        The manufacturer won't let you down
+    </h2>
+    <div class="p1_s2_c1 d-flex">
+        <div class="line_grey">
+        </div>
+        <div>
+            <div class="text">
+                We select only reliable suppliers 
+                and manufacturers of goods.
+            </div>
+            <div class="text">
+                We are dedicated to providing our customers with great value, high quality products and excellent service.
+             </div>
+            <div class="text text_end">
+                Our vision is to create a premium quality everyday life for our 
+                customers while also supporting environmental friendliness.
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="p1_s3">
+    <div class="p1_s3_c1 container d-flex align-items-center justify-content-center flex-column">
+        <h2>
+            We have a great choice for your desires
+        </h2>
+        <button class="d-flex align-items-center" onclick="window.location.href = '/products.html'">
+            Go to products
+            <picture><source srcset="img/black.webp" type="image/webp"><img src="img/black.png" alt=""></picture>
+        </button>
+    </div>
+</section>
+
+<section class="p1_s4 container d-flex align-items-center justify-content-center flex-column">
+    <div class="p1_s4_c1 d-flex justify-content-between">
+        <div class="icons d-flex flex-column align-items-center flex-wrap">
+            <div class="title">
+                Free shipping
+            </div>
+            <picture><source srcset="img/Group61.webp" type="image/webp"><img src="img/Group61.png" alt=""></picture>
+            <div>
+               2-5 days -> product at your home
+                 and you are happy!
+            </div>
+        </div>
+        <div class="icons d-flex flex-column align-items-center">
+            <div class="title">
+                Free technical support
+            </div>
+            <picture><source srcset="img/Group60.webp" type="image/webp"><img src="img/Group60.png" alt=""></picture>
+            <div>
+               We will always help to understand your question
+            </div>
+        </div>
+        <div class="icons d-flex flex-column align-items-center">
+            <div class="title">
+                Guarantee
+                 quality
+            </div>
+            <picture><source srcset="img/Group59.webp" type="image/webp"><img src="img/Group59.png" alt=""></picture>
+            <div>
+                We control production and use it ourselves
+            </div>
+        </div>
+    </div>
+    <div class="p1_s4_c2 d-flex flex-column align-items-center">
+        <h2>
+            Anyone will find for themselves
+             exactly what is needed
+        </h2>
+        <div class="p1_s4_c2_1 d-flex align-items-center justify-content-between">
+            <div class="text">
+                <div class="mb">
+                    To every girl
+                    <span>
+                        I want to
+                         to be beautiful.
+                    </span>
+
+                </div>
+                <div class="mb">
+                    <span>
+                        And we know it!
+                    </span>
+
+                </div>
+                <div>
+                    Therefore, we choose only
+                     <span>
+                         quality
+                     </span> care cosmetics,
+                     which will make
+                     <span>
+                         result
+                     </span>
+                     , and not just stand on the shelf.
+                </div>
+            </div>
+            <picture><source srcset="img/Group76.webp" type="image/webp"><img src="img/Group76.png" alt=""></picture>
+        </div>
+        <div class="p1_s4_c3 d-flex flex-column align-items-center">
+            <div class="p1_s4_c3_1 d-flex align-items-center">
+                <picture><source srcset="img/Group77.webp" type="image/webp"><img src="img/Group77.png" alt=""></picture>
+                <div class="text">
+                    <div class="mb">
+                        To every man
+                         <span>
+                             I want to look solid.
+                         </span>
+
+                    </div>
+                    <div class="mb">
+                        <span>
+                             And we know that too!
+                         </span>
+
+                     </div>
+                     <div>
+                         Therefore, we choose
+                         <span>
+                             qualitative
+                         </span>
+                         material for the production of diaries and diaries.
+                         <span>
+                             Real skin
+                         </span>
+                         and paper
+                         <span>
+                             handmade.
+                         </span>
+                         This is what a real man needs.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
+
+<section class="p1_s5">
+    <div class="p1_s5_c1 container d-flex align-items-center justify-content-center flex-column">
+        <h2>
+            How to order?
+        </h2>
+        <div class="p1_s5_c1_1 d-flex justify-content-between">
+            <div class="icons d-flex align-items-center flex-column">
+                <div class="img">
+                    <picture><source srcset="img/Group130.webp" type="image/webp"><img src="img/Group130.png" alt=""></picture>
+                </div>
+                
+                <div class="text">
+                    Find the product you need on our website
+                </div>
+            </div>
+            <div class="icons d-flex align-items-center flex-column">
+                <div class="img">
+                    <picture><source srcset="img/Group131.webp" type="image/webp"><img src="img/Group131.png" alt=""></picture>
+                </div>
+                
+                <div class="text">
+                    Click on the button to the amazon website
+                </div>
+            </div>
+            <div class="icons d-flex align-items-center flex-column">
+                <div class="img">
+                    <picture><source srcset="img/Group132.webp" type="image/webp"><img src="img/Group132.png" alt=""></picture>
+                </div>
+                
+                <div class="text">
+                    Leave a request on the amazon website and pay
+                </div>
+            </div>
+            <div class="icons d-flex align-items-center flex-column">
+                <div class="img">
+                    <picture><source srcset="img/Group133.webp" type="image/webp"><img src="img/Group133.png" alt=""></picture>
+                </div>
+                
+                <div class="text">
+                    And after 2-5 days your order pleases you at home
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="p1_s6 container flex-column">
+    <div>
+        <h2>
+            How do we control production?
+        </h2>
+        <div class="p1_s2_c1 d-flex">
+            <div class="line_grey">
+            </div>
+            <div>
+                <div class="text">
+                    It's no secret for all of us that many manufacturers and suppliers
+                     make low-quality products that, with rare exceptions, will be environmentally friendly.
+                </div>
+                <div class="text">
+                    Therefore, we firmly decided - <span>NOT</span> to do as they do!
+                </div>
+                <div class="text">
+                    We carefully select suppliers and manufacturers,
+                     we communicate, make test purchases or production,
+                     to make sure everything fits our values.
+                </div>
+                <div class="text text_end">
+                  We do not work with those who are incompetent in their work, who do not fulfill
+                     our production requirements and with those who do not provide reports
+                     during and after work.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h2>
+            What are our values?
+        </h2>
+        <div class="p1_s2_c1 d-flex">
+            <div class="line_pink">
+            </div>
+            <div>
+                <div class = "text text_center">
+                     Openness and honesty.
+                 </div>
+                 <div class = "text text_center">
+                     Do it well or nothing.
+                 </div>
+                 <div class = "text text_center">
+                     Sustainability is the key to success.
+                 </div>
+                 <div class = "text text_end text_center">
+                     Friendly atmosphere in the team and with clients.
+                 </div>
+                 <div class = "text text_end text_center">
+                     Orientation to long-term and fruitful cooperation.
+                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center flex-column">
+        <div class="choice">
+           Not sure what to choose?
+             Ask your question and we will help you!
+        </div>
+        <button data-toggle="modal" data-target="#exampleModal">
+            Ask a Question
+        </button>
+    </div>
+
+</section>
+
+<section class="p1_s7" id="soc">
+    <div class="container">
+        <div class="bg_choise d-flex flex-column align-items-center justify-content-center">
+            <div class="p1_s7_c1">
+                <h2 class="notranslate">
+                    Jade View LLC
+                </h2>
+                <div class="info">
+                    <div class="d-flex">
+                        <picture><source srcset="img/dog.webp" type="image/webp"><img src="img/dog.png" alt=""></picture>
+                        <div>
+                            jadeviewsd@gmail.com
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="d-flex">
+                        <picture><source srcset="img/tel.webp" type="image/webp"><img src="img/tel.png" alt=""></picture>
+                        <div>
+                            +1 (619) 689-3615
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="d-flex align-items-center">
+                        <picture><source srcset="img/geo.webp" type="image/webp"><img src="img/geo.png" alt=""></picture>
+                        <div class="d-flex flex-column">
+                            <div>
+                                P.O.BOX 191262
+                            </div>
+
+                            <div>
+                                San Diego, CA, 92159
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="soc_info d-flex flex-column align-items-center justify-content-center">
+            <h2>
+               We are in social networks:
+            </h2>
+            <div class="soc d-flex align-items-center justify-content-between">
+                <a href="https://www.instagram.com/jadeviewllc/" target="_blank">
+                    <picture><source srcset="img/inst.webp" type="image/webp"><img src="img/inst.png" alt=""></picture>
+                </a>
+                <a href="https://wa.me/16199959521" target="_blank">
+                    <picture><source srcset="img/whatsapp.webp" type="image/webp"><img src="img/whatsapp.png" alt=""></picture>
+                </a>
+                <a href="https://www.facebook.com/Jade-View-LLC-100681825279768" target="_blank">
+                    <picture><source srcset="img/facebook.webp" type="image/webp"><img src="img/facebook.png" alt=""></picture>
+                </a>
+            </div>
+            <div class="text">
+                <span class="notranslate">Jade View LLC</span>, based in San Diego, California, is an individual
+                 a company striving to provide each client with the highest standard of service.
+                 Providing retail sales of stationery, home decor items and others
+                 household items. nine
+            </div>
+            <a href="/thank.html"> Thank you letter</a>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer d-flex justify-content-center align-items-center">
+    <div class="footer_c1 container d-flex justify-content-between align-items-center">
+        <a href=""><picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" alt=""></picture></a>
+        <div class="text">
+            Full or partial copying of materials is possible only
+             with the written permission of the publisher. For cooperation
+             contact via the feedback form or by email
+             mail jadeviewsd@gmail.com
+        </div>
+        <div class="menu d-flex flex-column justify-content-between">
+            <a href="/index.html">Home</a>
+            <a href="/products.html" class="a2">Products</a>
+            <a href="/index.html#soc">Contacts</a>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <a href="https://www.facebook.com/Jade-View-LLC-100681825279768" target="_blank"><picture><source srcset="img/fb2.webp" type="image/webp"><img src="img/fb2.png" alt=""></picture></a>
+            <a href="https://wa.me/16199959521" target="_blank" class="a2"><picture><source srcset="img/va2.webp" type="image/webp"><img src="img/va2.png" alt=""></picture></a>
+            <a href="https://www.instagram.com/jadeviewllc/" target="_blank"><picture><source srcset="img/int2.webp" type="image/webp"><img src="img/int2.png" alt=""></picture></a>
+        </div>
+    </div>
+</footer>
+
+    <main class="main">
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

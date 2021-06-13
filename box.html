@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a65509000a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title class="notranslate">Jade View</title>
+</head>
+
+<body class="page page-fix">
+    <div class="content">
+        <header class="header">
+    <div class="header_section container d-flex align-items-center justify-content-between">
+        <a href="/index.html" class="mainlogo"> <picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" class="logo" alt=""></picture></a>
+        <div class="header-menu">
+            <div class="list d-flex align-items-center">
+                <a class="menu-a" href="/index.html">Home</a>
+                <a class="menu-a" href="/index.html#about">About us</a>
+                <a class="menu-a" href="/index.html#soc">Contacts</a>
+                <div class="dropdown">
+                    <a href="/products.html" class="dropdown menu-a">Products</a>
+                    <div class="d-content ">
+                        <a href="/daily_planner.html" class="dropdown-content">Diaries</a>
+                        <a href="/cosmetic.html" class="dropdown-content">Care cosmetics</a>
+                        <a href="/knifes.html" class="dropdown-content">Kitchen goods</a>
+                        <a href="/box.html" class="dropdown-content">Jewelry boxes and jewelry</a>
+                    </div>
+                </div>
+            </div>
+            <div class="feed d-flex align-items-center">
+                <div class="number">
+                    +1 (619) 689-3615
+                </div>
+                <button class="feedback" data-toggle="modal" data-target="#exampleModal">
+                    Feedback
+                </button>
+                <div class="my-dropdown">
+                    <div class="select">
+                        <div class="wrld"><picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang">En</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_2" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_3" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+                <div class="my-dropdown-mob">
+                    <div class="select">
+                        <div class="wrld"> <picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang-mob">Ru</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1-mob" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_2-mob" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_3-mob" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4-mob" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-wrapper">
+            <div class="burger">
+                <span class="sp"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content d-flex flex-column align-items-center">
+            <div class="title">
+                <h3>
+                    Ask your question
+                </h3>
+                <h3>
+                    and we will be happy to help you!
+                </h3>
+            </div>
+            <form id="form1" action="form-handler.php" onsubmit="return validate_p1()" method="POST" class="d-flex flex-column form align-items-center">
+                <input type="text" placeholder="Name" id="FormInputName" name="FormInputName">
+                <input type="email" placeholder="E-mail" id="FormInputEmail" name="FormInputEmail">
+                <input type="tel" placeholder="Phone number" id="FormInputTel" name="FormInputTel">
+                <textarea cols="30" rows="10" placeholder="Your question*" id="FormInputQ" name="FormInputQ"></textarea>
+                <button type="submit" name="submit1">
+                    Send
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="tovar box d-flex align-items-end justify-content-center">
+        <div class="tovar_c1 container d-flex justify-content-center flex-column">
+            <h2>
+                Jewelry and jewelry boxes
+            </h2>
+            <div class="text">
+                Here are all the products you might need!
+                We <span>love</span> treat each of our products and believe that when they
+                 will be with you - you will also <span>love her</span>!
+            </div>
+        </div>
+    </div>
+    <div class="products_list container d-flex align-items-center justify-content-between flex-wrap">
+        <div class="d-flex flex-column align-items-center">
+
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#Alpha_and_Omega"> <picture><source srcset="img/AlphaandOmega_main1.webp" type="image/webp"><img src="img/AlphaandOmega_main1.png" alt=""></picture></a>
+            </div>
+
+            <button data-toggle="modal" data-target="#Alpha_and_Omega">
+                <div>
+                    Jewelry box
+                </div>
+                <div class="notranslate">
+                    ”Alpha and Omega”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#Alpha_and_Omega_(v2)"> <picture><source srcset="img/AlphaandOmega_v2_main1.webp" type="image/webp"><img src="img/AlphaandOmega_v2_main1.png" alt=""></picture></a>
+            </div>
+
+            <button data-toggle="modal" data-target="#Alpha_and_Omega_(v2)">
+                <div>
+                    Jewelry box
+                </div>
+                <div class="notranslate">
+                    ”Alpha and Omega (v2)”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#Flower_of_Life"><picture><source srcset="img/FlowerofLife_main1.webp" type="image/webp"><img src="img/FlowerofLife_main1.png" alt=""></picture> </a>
+            </div>
+            <button data-toggle="modal" data-target="#Flower_of_Life">
+                <div>
+                    Jewelry box
+                </div>
+                <div class="notranslate">
+                    "Flower of Life"
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#Handcrafted_Wooden"><picture><source srcset="img/HandcraftedWooden_main1.webp" type="image/webp"><img src="img/HandcraftedWooden_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#Handcrafted_Wooden">
+                <div class="inside">
+                    Jewelry box
+                </div>
+                <div class="notranslate">
+                    "Handcrafted Wooden"
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img ">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#black_rosary_metallic_centerpics"><picture><source srcset="img/metalliccenterpics_main1.webp" type="image/webp"><img src="img/metalliccenterpics_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#black_rosary_metallic_centerpics">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”black rosary metallic centerpics”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#black_rosary_with_medallion"><picture><source srcset="img/blackrosary_main1.webp" type="image/webp"><img src="img/blackrosary_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#black_rosary_with_medallion">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”black rosary with medallion”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#carrosa_rypics"><picture><source srcset="img/carrosarypics_main1.webp" type="image/webp"><img src="img/carrosarypics_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#carrosa_rypics">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”carrosa rypics”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#white_rosary_with_medallion"><picture><source srcset="img/whiterosary_main1.webp" type="image/webp"><img src="img/whiterosary_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#white_rosary_with_medallion">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”white rosary with medallion”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center w5">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#wood_and_perl_mini_rosary"><picture><source srcset="img/woodandperl_main1.webp" type="image/webp"><img src="img/woodandperl_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#wood_and_perl_mini_rosary">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”wood and perl mini rosary”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#wood_enrosary"><picture><source srcset="img/woodenrosary_main1.webp" type="image/webp"><img src="img/woodenrosary_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#wood_enrosary">
+                <div>
+                    Bijouterie
+                </div>
+                <div class="notranslate">
+                    ”wood enrosary”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center none">
+            <a href=""><picture><source srcset="img/box.webp" type="image/webp"><img src="img/box.png" alt=""></picture></a>
+            <button>
+                <div>
+                    Jewelry boxes and jewelry
+                </div>
+            </button>
+        </div>
+    </div>
+    </div>
+    <footer class="footer d-flex justify-content-center align-items-center">
+    <div class="footer_c1 container d-flex justify-content-between align-items-center">
+        <a href=""><picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" alt=""></picture></a>
+        <div class="text">
+            Full or partial copying of materials is possible only
+             with the written permission of the publisher. For cooperation
+             contact via the feedback form or by email
+             mail jadeviewsd@gmail.com
+        </div>
+        <div class="menu d-flex flex-column justify-content-between">
+            <a href="/index.html">Home</a>
+            <a href="/products.html" class="a2">Products</a>
+            <a href="/index.html#soc">Contacts</a>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <a href="https://www.facebook.com/Jade-View-LLC-100681825279768" target="_blank"><picture><source srcset="img/fb2.webp" type="image/webp"><img src="img/fb2.png" alt=""></picture></a>
+            <a href="https://wa.me/16199959521" target="_blank" class="a2"><picture><source srcset="img/va2.webp" type="image/webp"><img src="img/va2.png" alt=""></picture></a>
+            <a href="https://www.instagram.com/jadeviewllc/" target="_blank"><picture><source srcset="img/int2.webp" type="image/webp"><img src="img/int2.png" alt=""></picture></a>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="modal fade ffffff" id="Alpha_and_Omega" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/AlphaandOmega.webp" type="image/webp"><img src="img/AlphaandOmega.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/AlphaandOmega_2.webp" type="image/webp"><img src="img/AlphaandOmega_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/AlphaandOmega_4.webp" type="image/webp"><img src="img/AlphaandOmega_4.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 15.00$
+                            </div>
+                            <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Alpha and Omega
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                External dimensions of our beautiful natural wood keychain box -
+                                7,5 x 5 x 3,5 см
+
+
+
+
+                            </div>
+                            <div class="info info_end">
+                                This jewelry box is handcrafted from gorgeous brown teak
+                                 wood and has a shiny glossy surface with an Alpha and Omega pattern.
+                                 This jewelry box will be the perfect addition to your room, giving it a vintage,
+                                 antique look.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="Alpha_and_Omega_(v2)" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/AlphaandOmega_v2.webp" type="image/webp"><img src="img/AlphaandOmega_v2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/AlphaandOmega_v2_2.webp" type="image/webp"><img src="img/AlphaandOmega_v2_2.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 15.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Alpha and Omega (v2)
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                External dimensions of our beautiful natural wood keychain box -
+                                7,5 x 5 x 3,5 см
+
+
+
+
+                            </div>
+                            <div class="info info_end">
+                                This jewelry box is handcrafted from gorgeous brown teak
+                                 wood and has a shiny glossy surface with an Alpha and Omega pattern.
+                                 This jewelry box will be the perfect addition to your room, giving it a vintage,
+                                 antique look.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="Flower_of_Life" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/FlowerofLife.webp" type="image/webp"><img src="img/FlowerofLife.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/FlowerofLife_2.webp" type="image/webp"><img src="img/FlowerofLife_2.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 15.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Flower of Life
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                External dimensions of our beautiful natural wood keychain box -
+                                7,5 x 5 x 3,5 см
+
+                            </div>
+                            <div class="info info_end">
+                                This jewelry box is handcrafted from gorgeous brown teak wood, has
+                                 shiny glossy surface with a beautiful flower pattern that inspires and
+                                 energizes, giving aesthetics to the place where the box is.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="Handcrafted_Wooden" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/HandcraftedWooden.webp" type="image/webp"><img src="img/HandcraftedWooden.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/HandcraftedWooden_2.webp" type="image/webp"><img src="img/HandcraftedWooden_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/HandcraftedWooden_3.webp" type="image/webp"><img src="img/HandcraftedWooden_3.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 15.00$
+                            </div>
+                                <a href="https://www.amazon.com/dp/B094MTDJW9" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                "Handcrafted Wooden"
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                External dimensions of our beautiful natural wood keychain box -
+                                7,5 x 5 x 3,5 см, which gives you the perfect place to store your Catholic rosary,
+                                 jewelry or any trinkets safe and in perfect condition.
+
+
+                            </div>
+                            <div class="info info_end">
+                               This jewelry box is handcrafted from gorgeous brown teak wood and
+                                 has a shiny glossy surface. This rectangular chest of beads, made
+                                 made of brass, will be the perfect addition to your room, giving it a vintage, antique
+                                 view.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="black_rosary_metallic_centerpics" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_1.webp" type="image/webp"><img src="img/metalliccenterpics_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_2.webp" type="image/webp"><img src="img/metalliccenterpics_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_3.webp" type="image/webp"><img src="img/metalliccenterpics_3.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_4.webp" type="image/webp"><img src="img/metalliccenterpics_4.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_5.webp" type="image/webp"><img src="img/metalliccenterpics_5.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_6.webp" type="image/webp"><img src="img/metalliccenterpics_6.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_7.webp" type="image/webp"><img src="img/metalliccenterpics_7.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/metalliccenterpics_8.webp" type="image/webp"><img src="img/metalliccenterpics_8.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                black rosary metallic centerpics
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                                Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="black_rosary_with_medallion" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/blackrosary_1.webp" type="image/webp"><img src="img/blackrosary_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/blackrosary_2.webp" type="image/webp"><img src="img/blackrosary_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/blackrosary_3.webp" type="image/webp"><img src="img/blackrosary_3.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                black rosary with medallion
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                                Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="carrosa_rypics" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/carrosarypics_1.webp" type="image/webp"><img src="img/carrosarypics_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/carrosarypics_2.webp" type="image/webp"><img src="img/carrosarypics_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/carrosarypics_3.webp" type="image/webp"><img src="img/carrosarypics_3.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/carrosarypics_4.webp" type="image/webp"><img src="img/carrosarypics_4.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/carrosarypics_5.webp" type="image/webp"><img src="img/carrosarypics_5.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                carrosa rypics
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                                Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="white_rosary_with_medallion" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/whiterosary_1.webp" type="image/webp"><img src="img/whiterosary_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/whiterosary_2.webp" type="image/webp"><img src="img/whiterosary_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/whiterosary_3.webp" type="image/webp"><img src="img/whiterosary_3.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/whiterosary_4.webp" type="image/webp"><img src="img/whiterosary_4.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/whiterosary_5.webp" type="image/webp"><img src="img/whiterosary_5.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                white rosary with medallion
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                                Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="wood_and_perl_mini_rosary" tabindex="-1" role="dialog"
+        aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_1.webp" type="image/webp"><img src="img/woodandperl_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_2.webp" type="image/webp"><img src="img/woodandperl_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_3.webp" type="image/webp"><img src="img/woodandperl_3.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_4.webp" type="image/webp"><img src="img/woodandperl_4.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_5.webp" type="image/webp"><img src="img/woodandperl_5.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_6.webp" type="image/webp"><img src="img/woodandperl_6.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodandperl_7.webp" type="image/webp"><img src="img/woodandperl_7.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                wood and perl mini rosary
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                               Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="wood_enrosary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_1.webp" type="image/webp"><img src="img/woodenrosary_1.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_2.webp" type="image/webp"><img src="img/woodenrosary_2.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_3.webp" type="image/webp"><img src="img/woodenrosary_3.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_4.webp" type="image/webp"><img src="img/woodenrosary_4.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_5.webp" type="image/webp"><img src="img/woodenrosary_5.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_6.webp" type="image/webp"><img src="img/woodenrosary_6.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_7.webp" type="image/webp"><img src="img/woodenrosary_7.jpg" alt=""></picture></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slide-wrapper"><picture><source srcset="img/woodenrosary_8.webp" type="image/webp"><img src="img/woodenrosary_8.jpg" alt=""></picture></div>
+                                    </div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 10.00$
+                            </div>
+                                <a href="https://www.amazon.com/dp/B094MS3PFK" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                wood enrosary
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info info_end">
+                                Made of natural wood, handmade, durable used for weaving
+                                 nylon thread.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <main class="main">
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

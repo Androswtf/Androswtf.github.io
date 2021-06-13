@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://kit.fontawesome.com/a65509000a.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <title class="notranslate">Jade View</title>
+</head>
+
+<body class="page page-fix">
+    <div class="content">
+        <header class="header">
+    <div class="header_section container d-flex align-items-center justify-content-between">
+        <a href="/index.html" class="mainlogo"> <picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" class="logo" alt=""></picture></a>
+        <div class="header-menu">
+            <div class="list d-flex align-items-center">
+                <a class="menu-a" href="/index.html">Home</a>
+                <a class="menu-a" href="/index.html#about">About us</a>
+                <a class="menu-a" href="/index.html#soc">Contacts</a>
+                <div class="dropdown">
+                    <a href="/products.html" class="dropdown menu-a">Products</a>
+                    <div class="d-content ">
+                        <a href="/daily_planner.html" class="dropdown-content">Diaries</a>
+                        <a href="/cosmetic.html" class="dropdown-content">Care cosmetics</a>
+                        <a href="/knifes.html" class="dropdown-content">Kitchen goods</a>
+                        <a href="/box.html" class="dropdown-content">Jewelry boxes and jewelry</a>
+                    </div>
+                </div>
+            </div>
+            <div class="feed d-flex align-items-center">
+                <div class="number">
+                    +1 (619) 689-3615
+                </div>
+                <button class="feedback" data-toggle="modal" data-target="#exampleModal">
+                    Feedback
+                </button>
+                <div class="my-dropdown">
+                    <div class="select">
+                        <div class="wrld"><picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang">En</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_2" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_3" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+                <div class="my-dropdown-mob">
+                    <div class="select">
+                        <div class="wrld"> <picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang-mob">Ru</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1-mob" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_2-mob" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_3-mob" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4-mob" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-wrapper">
+            <div class="burger">
+                <span class="sp"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content d-flex flex-column align-items-center">
+            <div class="title">
+                <h3>
+                    Ask your question
+                </h3>
+                <h3>
+                    and we will be happy to help you!
+                </h3>
+            </div>
+            <form id="form1" action="form-handler.php" onsubmit="return validate_p1()" method="POST" class="d-flex flex-column form align-items-center">
+                <input type="text" placeholder="Name" id="FormInputName" name="FormInputName">
+                <input type="email" placeholder="E-mail" id="FormInputEmail" name="FormInputEmail">
+                <input type="tel" placeholder="Phone number" id="FormInputTel" name="FormInputTel">
+                <textarea cols="30" rows="10" placeholder="Your question*" id="FormInputQ" name="FormInputQ"></textarea>
+                <button type="submit" name="submit1">
+                    Send
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="tovar dailly_planner d-flex align-items-end justify-content-center">
+        <div class="tovar_c1 container d-flex justify-content-center flex-column align-items-center">
+            <h2>
+                Diaries
+            </h2>
+            <div class="text">
+                Here are all the products you might need!
+                We <span>love</span> treat each of our products and believe that when they
+                 will be with you - you will also <span>love her</span>!
+            </div>
+        </div>
+    </div>
+    <div class="products_list container d-flex align-items-center justify-content-between flex-wrap">
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                    data-target="#Be_strong"><picture><source srcset="img/BeStrong_main1.webp" type="image/webp"><img src="img/BeStrong_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#Be_strong">
+                <div>
+                    Diary
+                </div>
+                <div class="notranslate">
+                    ”Be strong”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                data-target="#Blue_diary"><picture><source srcset="img/blue_diary_main.webp" type="image/webp"><img src="img/blue_diary_main.png" alt=""></picture></a>
+            </div>
+
+            <button data-toggle="modal" data-target="#Blue_diary">
+                <div>
+                    Diary
+                </div>
+                <div class="notranslate">
+                    ”Blue diary”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                data-target="#Black_diary"><picture><source srcset="img/blackdiary_main1.webp" type="image/webp"><img src="img/blackdiary_main1.png" alt=""></picture></a>
+            </div>
+            <button data-toggle="modal" data-target="#Black_diary">
+                <div>
+                    Diary
+                </div>
+                <div class="notranslate">
+                    ”Black diary”
+                </div>
+            </button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+            <div class="img">
+                <a href="" class="d-flex align-items-center justify-content-center" data-toggle="modal"
+                data-target="#Brown_diary"><picture><source srcset="img/browndiary_main1.webp" type="image/webp"><img src="img/browndiary_main1.png" alt=""></picture></a>
+            </div>
+
+            <button data-toggle="modal" data-target="#Brown_diary">
+                <div class="inside">
+                    Diary
+                </div>
+                <div class="notranslate">
+                    ”Brown diary with pen”
+                </div>
+            </button>
+        </div>
+    </div>
+    </div>
+    <footer class="footer d-flex justify-content-center align-items-center">
+    <div class="footer_c1 container d-flex justify-content-between align-items-center">
+        <a href=""><picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" alt=""></picture></a>
+        <div class="text">
+            Full or partial copying of materials is possible only
+             with the written permission of the publisher. For cooperation
+             contact via the feedback form or by email
+             mail jadeviewsd@gmail.com
+        </div>
+        <div class="menu d-flex flex-column justify-content-between">
+            <a href="/index.html">Home</a>
+            <a href="/products.html" class="a2">Products</a>
+            <a href="/index.html#soc">Contacts</a>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <a href="https://www.facebook.com/Jade-View-LLC-100681825279768" target="_blank"><picture><source srcset="img/fb2.webp" type="image/webp"><img src="img/fb2.png" alt=""></picture></a>
+            <a href="https://wa.me/16199959521" target="_blank" class="a2"><picture><source srcset="img/va2.webp" type="image/webp"><img src="img/va2.png" alt=""></picture></a>
+            <a href="https://www.instagram.com/jadeviewllc/" target="_blank"><picture><source srcset="img/int2.webp" type="image/webp"><img src="img/int2.png" alt=""></picture></a>
+        </div>
+    </div>
+</footer>
+
+
+    <div class="modal fade ffffff" id="Be_strong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/BeStrong_1.webp" type="image/webp"><img src="img/BeStrong_1.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/BeStrong_2.webp" type="image/webp"><img src="img/BeStrong_2.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/BeStrong_3.webp" type="image/webp"><img src="img/BeStrong_3.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/BeStrong_4.webp" type="image/webp"><img src="img/BeStrong_4.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/BeStrong_5.webp" type="image/webp"><img src="img/BeStrong_5.jpg" alt=""></picture></div></div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 25.00$
+                            </div>
+                                <a href="https://www.amazon.com/Sketchbook-Notebook-Christian-Religious-Courageous/dp/B08KYPL4KW" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Be Strong and Courageous
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                Our gorgeous ANTIQUE HANDMADE magazines are made from 100%
+                                 buffalo skin, which provides an old-fashioned style of writing. Along with this, the rustic
+                                 paper and the unique scent of natural leather give your work a VINTAGE AESTHETIC
+
+                            </div>
+                            <div class="info info_end">
+                                The leather cover is engraved with SCRIPTURE JOSHUA 1: 9 "BE STRONG AND COVERED."
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal fade ffffff" id="Blue_diary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_1.webp" type="image/webp"><img src="img/bluediary_1.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_2.webp" type="image/webp"><img src="img/bluediary_2.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_3.webp" type="image/webp"><img src="img/bluediary_3.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_4.webp" type="image/webp"><img src="img/bluediary_4.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_5.webp" type="image/webp"><img src="img/bluediary_5.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/bluediary_6.webp" type="image/webp"><img src="img/bluediary_6.jpg" alt=""></picture></div></div>
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 25.00$
+                            </div>
+                                <a href="https://www.amazon.com/Genuine-Leather-Diary-Vision-Quire/dp/B08L8H6S9R" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Blue diary
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                Handmade vintage magazine made from 100% genuine buffalo leather. Its modern yet antique style helps to inspire your writing and vision. A perfect gift for creative people and anyone with a taste.
+                                 And his key will create an atmosphere of comfort and security.
+
+
+                            </div>
+                            <div class="info info_end">
+                                Imagine yourself in a few years when you come across this beautiful diary that you started. In it, you will find the goals that you set in writing, dreams that at the time did not even dare to pronounce. And then you realize that these visions and dreams of that time led you to the real life in which you live now.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade ffffff" id="Black_diary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content m_tovar">
+                <div class="m_header">
+                    <div class="container d-flex justify-content-between align-items-center">
+                        <div class="hidden">
+                        </div>
+                        <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="bg-w">
+                    <div class="m_body container d-flex align-items-center justify-content-around">
+
+                        <div class="d-flex flex-column justify-content-center align-items-center slid">
+                            <div class="swiper-container modal-swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_1.webp" type="image/webp"><img src="img/blackdiary_1.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_2.webp" type="image/webp"><img src="img/blackdiary_2.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_3.webp" type="image/webp"><img src="img/blackdiary_3.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_5.webp" type="image/webp"><img src="img/blackdiary_5.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_6.webp" type="image/webp"><img src="img/blackdiary_6.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_7.webp" type="image/webp"><img src="img/blackdiary_7.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_8.webp" type="image/webp"><img src="img/blackdiary_8.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_9.webp" type="image/webp"><img src="img/blackdiary_9.jpg" alt=""></picture></div></div>
+                                    <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/blackdiary_10.webp" type="image/webp"><img src="img/blackdiary_10.jpg" alt=""></picture></div></div>`
+                                </div>
+                                <!-- If we need pagination -->
+                                <div class="swiper-pagination"></div>
+
+                                <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                            </div>
+                            <div class="cost">
+                                The cost: 25.00$
+                            </div>
+                                <a href="https://www.amazon.com/dp/B08L8DKWW1/ref=cm_sw_em_r_mt_dp_1W6C1N13RGP599V19ZG1" target="_blank">Go to product</a>
+                        </div>
+                        <div class="text d-flex align-items-center flex-column">
+                            <h2 class="notranslate">
+                                Black diary
+                            </h2>
+                            <h3>
+                                Description
+                            </h3>
+                            <div class="info">
+                                Handmade vintage magazine made from 100% genuine buffalo leather.
+                                 Its antique style and rustic charm create a sense of antiquity, helping
+                                 inspire your writing and vision. Ideal gift for creative people and
+                                 anyone with a taste for antiques.
+
+
+                            </div>
+                            <div class="info info_end">
+                                Imagine yourself in a few years when you come across this beautiful diary,
+                                 which you started. In it you will find the goals that you set in writing, dreams,
+                                 which at that time did not even dare to pronounce. And then you realize that these visions and
+                                 the dreams of that time led you to the real life you live in now.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade ffffff" id="Brown_diary" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen" role="document">
+        <div class="modal-content m_tovar">
+            <div class="m_header">
+                <div class="container d-flex justify-content-between align-items-center">
+                    <div class="hidden">
+                    </div>
+                    <h4 class="modal-title" id="myModalLabel">Quick view</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <picture><source srcset="img/targeting-cross1.webp" type="image/webp"><img src="img/targeting-cross1.png" alt=""></picture>
+                    </button>
+                </div>
+
+            </div>
+            <div class="bg-w">
+                <div class="m_body container d-flex align-items-center justify-content-around">
+
+                    <div class="d-flex flex-column justify-content-center align-items-center slid">
+                        <div class="swiper-container modal-swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_1.webp" type="image/webp"><img src="img/browndiary_1.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_2.webp" type="image/webp"><img src="img/browndiary_2.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_3.webp" type="image/webp"><img src="img/browndiary_3.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_4.webp" type="image/webp"><img src="img/browndiary_4.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_5.webp" type="image/webp"><img src="img/browndiary_5.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_6.webp" type="image/webp"><img src="img/browndiary_6.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_7.webp" type="image/webp"><img src="img/browndiary_7.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_8.webp" type="image/webp"><img src="img/browndiary_8.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_9.webp" type="image/webp"><img src="img/browndiary_9.jpg" alt=""></picture></div></div>
+                                <div class="swiper-slide"><div class="slide-wrapper"><picture><source srcset="img/browndiary_10.webp" type="image/webp"><img src="img/browndiary_10.jpg" alt=""></picture></div></div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+                        </div>
+                        <div class="cost">
+                            The cost: 25.00$
+                        </div>
+                            <a href="https://www.amazon.com/dp/B08L8F7VC9/ref=cm_sw_r_wa_awdb_imm_2JKW8ZS1CFWN839V6W02" target="_blank">Go to product</a>
+                    </div>
+                    <div class="text d-flex align-items-center flex-column">
+                        <h2 class="notranslate">
+                            Brown diary with pen
+                        </h2>
+                        <h3>
+                            Description
+                        </h3>
+                        <div class="info">
+                            Handmade vintage magazine made from 100% genuine buffalo leather.
+                             Its modern yet antique style helps to inspire your
+                             writing and vision. A perfect gift for creative people and anyone with a taste.
+                             And his pen, which comes in the kit, will help you write down what you need at any time.
+                             and no longer have to look for it everywhere.
+
+
+
+                        </div>
+                        <div class="info info_end">
+                            Imagine yourself in a few years when you come across this beautiful diary,
+                             which you started. In it you will find the goals that you set in writing, dreams,
+                             which at that time did not even dare to pronounce. And then you realize that these visions and
+                             the dreams of that time led you to the real life you live in now.
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+    <main class="main">
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

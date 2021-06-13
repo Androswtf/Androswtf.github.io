@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/google-translate.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <script src="https://kit.fontawesome.com/a65509000a.js" crossorigin="anonymous"></script>
+    <title class="notranslate">Jade View</title>
+</head>
+
+<body class="page page-fix">
+    <header class="header">
+    <div class="header_section container d-flex align-items-center justify-content-between">
+        <a href="/index.html" class="mainlogo"> <picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" class="logo" alt=""></picture></a>
+        <div class="header-menu">
+            <div class="list d-flex align-items-center">
+                <a class="menu-a" href="/index.html">Home</a>
+                <a class="menu-a" href="/index.html#about">About us</a>
+                <a class="menu-a" href="/index.html#soc">Contacts</a>
+                <div class="dropdown">
+                    <a href="/products.html" class="dropdown menu-a">Products</a>
+                    <div class="d-content ">
+                        <a href="/daily_planner.html" class="dropdown-content">Diaries</a>
+                        <a href="/cosmetic.html" class="dropdown-content">Care cosmetics</a>
+                        <a href="/knifes.html" class="dropdown-content">Kitchen goods</a>
+                        <a href="/box.html" class="dropdown-content">Jewelry boxes and jewelry</a>
+                    </div>
+                </div>
+            </div>
+            <div class="feed d-flex align-items-center">
+                <div class="number">
+                    +1 (619) 689-3615
+                </div>
+                <button class="feedback" data-toggle="modal" data-target="#exampleModal">
+                    Feedback
+                </button>
+                <div class="my-dropdown">
+                    <div class="select">
+                        <div class="wrld"><picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang">En</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_2" data-google-lang="ru"><div class="notranslate">Ru</div></li>
+                        <li id="lang_3" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+                <div class="my-dropdown-mob">
+                    <div class="select">
+                        <div class="wrld"> <picture><source srcset="img/wrld.webp" type="image/webp"><img src="img/wrld.png" alt=""></picture></div>
+                        <span id="c_lang-mob">Ru</span>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="my-dropdown-menu">
+                        <li id="lang_1-mob" data-google-lang="ru" class="notranslate"><div>Ru</div></li>
+                        <li id="lang_2-mob" data-google-lang="en"><div>En</div></li>
+                        <li id="lang_3-mob" data-google-lang="es"><div>Es</div></li>
+                        <li id="lang_4-mob" data-google-lang="pt"><div>Pt</div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="burger-wrapper">
+            <div class="burger">
+                <span class="sp"></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content d-flex flex-column align-items-center">
+            <div class="title">
+                <h3>
+                    Ask your question
+                </h3>
+                <h3>
+                    and we will be happy to help you!
+                </h3>
+            </div>
+            <form id="form1" action="form-handler.php" onsubmit="return validate_p1()" method="POST" class="d-flex flex-column form align-items-center">
+                <input type="text" placeholder="Name" id="FormInputName" name="FormInputName">
+                <input type="email" placeholder="E-mail" id="FormInputEmail" name="FormInputEmail">
+                <input type="tel" placeholder="Phone number" id="FormInputTel" name="FormInputTel">
+                <textarea cols="30" rows="10" placeholder="Your question*" id="FormInputQ" name="FormInputQ"></textarea>
+                <button type="submit" name="submit1">
+                    Send
+                </button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="tovar products d-flex align-items-end justify-content-center thank_bg">
+        <div class="tovar_c1 container align-items-center d-flex justify-content-center flex-column thank_bg_info ">
+            <h2 class='thank'>
+                <div>
+                    Thanks that
+                     chose us!
+                </div>
+
+            </h2>
+        </div>
+    </div>
+    <div class="thank_list container d-flex align-items-center justify-content-center">
+        <img id="thximg" src="img/image1_2.png" alt="">
+    </div>
+    <footer class="footer d-flex justify-content-center align-items-center">
+    <div class="footer_c1 container d-flex justify-content-between align-items-center">
+        <a href=""><picture><source srcset="img/logo-1.webp" type="image/webp"><img src="img/logo-1.png" alt=""></picture></a>
+        <div class="text">
+            Full or partial copying of materials is possible only
+             with the written permission of the publisher. For cooperation
+             contact via the feedback form or by email
+             mail jadeviewsd@gmail.com
+        </div>
+        <div class="menu d-flex flex-column justify-content-between">
+            <a href="/index.html">Home</a>
+            <a href="/products.html" class="a2">Products</a>
+            <a href="/index.html#soc">Contacts</a>
+        </div>
+        <div class="d-flex flex-column justify-content-between">
+            <a href="https://www.facebook.com/Jade-View-LLC-100681825279768" target="_blank"><picture><source srcset="img/fb2.webp" type="image/webp"><img src="img/fb2.png" alt=""></picture></a>
+            <a href="https://wa.me/16199959521" target="_blank" class="a2"><picture><source srcset="img/va2.webp" type="image/webp"><img src="img/va2.png" alt=""></picture></a>
+            <a href="https://www.instagram.com/jadeviewllc/" target="_blank"><picture><source srcset="img/int2.webp" type="image/webp"><img src="img/int2.png" alt=""></picture></a>
+        </div>
+    </div>
+</footer>
+
+    <main class="main">
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
